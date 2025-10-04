@@ -283,12 +283,13 @@ module.exports = {
   request: {
     timeout: 30000,
     headers: {
-      Cookie: 'cisession=e49ff13191d6875887193cae9e324b44ef85768d;'
+      Cookie: 'cisession=ab72a050997c28759aa833cd8ae417ca5e323279;'
     }
   },
   parser: function ({ content }) {
     let programs = []
     const items = parseItems(content)
+
     for (let item of items) {
       const $item = cheerio.load(item)
       const start = parseStart($item)
